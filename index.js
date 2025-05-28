@@ -1,8 +1,10 @@
+require('dotenv').config()
 const express = require('express')
 const app = express()
 var cors = require('cors')
 const mysql = require('mysql2')
-const port = 3000
+
+const port = process.env.PORT || 3000;
 
 
 app.use(cors())
@@ -12,10 +14,10 @@ app.use(express.json())
 
 
 const connection = mysql.createConnection({
-  host: 'yamanote.proxy.rlwy.net',
-  user: 'root',
-  password: 'IirImDUDKzCOEOhasRGTDallvwAiGzZq',
-  database: 'railway'
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME
 
 });
 
