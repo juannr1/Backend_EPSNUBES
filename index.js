@@ -12,10 +12,10 @@ app.use(express.json())
 
 
 const connection = mysql.createConnection({
-  host: 'localhost',
+  host: 'yamanote.proxy.rlwy.net',
   user: 'root',
-  password: '',
-  database: 'datosprecios'
+  password: 'IirImDUDKzCOEOhasRGTDallvwAiGzZq',
+  database: 'railway'
 
 });
 
