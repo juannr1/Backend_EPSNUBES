@@ -15,6 +15,7 @@ app.use(express.json())
 
 const connection = mysql.createConnection({
   host: process.env.MYSQL_PUBLIC_URL,
+  port: process.env.MYSQ_PORT,
   user: process.env.MYSQLUSER,
   password: process.env.MYSQL_ROOT_PASSWORD,
   database: process.env.MYSQL_DATABASE
